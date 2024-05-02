@@ -1,5 +1,5 @@
 #імпортує клас Flask з бібліотеки Flask. Це необхідно для створення екземпляру додатку Flask
-from flask import Flask 
+from flask import Flask, render_template 
 
 #створення екземпляру класу Flask
 app = Flask(__name__)
@@ -9,4 +9,8 @@ app = Flask(__name__)
 @app.route("/")
 #функція яка буде повертати текст на головню сторінку
 def hello_world():
-    return "<p>Hello, World!</p>"
+    return render_template("index.html",)
+#функція яка буде повертати текст на сторінку
+@app.route("/contact/")
+def contacts():
+    return render_template("contact.html")
