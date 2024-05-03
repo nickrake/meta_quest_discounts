@@ -1,51 +1,71 @@
+<!-- тут вказується, що документ є HTML5. -->
 <!DOCTYPE html>
+<!-- lang="en" означає, що основна мова документа – англійська.-->
 <html lang="en">
 
-
-
+<!-- Відкриває секцію заголовка документа, де визначаються метадані, посилання на стилі, скрипти тощо.-->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Встановлює назву вкладки браузера. -->
     <title>Meta Discounts Codes</title>
+
+    <!--Визначає кодування символів для документа -->
+    <meta charset="UTF-8">
+    <!--Цей мета-тег налаштовує видиму область сторінки для різних пристроїв, важливий для респонсивного дизайну. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Оптимізує швидкість завантаження, встановлюючи попереднє з'єднання з Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <!--Схожий на попередній, але для іншого домену Google Fonts, crossorigin використовується для коректної роботи між доменами -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Підключає шрифт "Oswald" з Google Fonts. -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <!--Підключає стилі CSS з файлу style.css, розташованого в статичній папці сервера (Flask синтаксис). -->
     <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
 </head>
 
 
-
+<!--основний тілесний розділ HTML-документа. -->
 <body>
 
-
+    <!--Визначає заголовок сторінки -->
     <header>
-    <a href="{{ url_for('hello_world') }}" style="text-decoration: none; font-size: 15px;">
+
+        <!--Створює посилання без підкреслення з розміром шрифта 15px, яке веде на функцію hello_world у Flask. -->
+        <a href="{{ url_for('hello_world') }}" style="text-decoration: none; font-size: 15px;">
+        <!--Заголовок H1 з зображенням та текстом, зображення береться зі статичних файлів. -->
         <h1>
-            <img src="{{ url_for('static', filename='img/meta_6033716.png') }}" alt="" width="30">
-            Meta Discounts Codes
+        <img src="{{ url_for('static', filename='img/meta_6033716.png') }}" alt="" width="30">
+         Meta Discounts Codes
         </h1>
-    </a>
-    <a href="{{url_for('contacts')}}">Contacts</a>
+        </a>
+
+        <a href="{{url_for('contacts')}}">Contacts</a>
+
     </header>
 
-
+    <!--основна секцію контенту. -->
     <main>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, placeat! Beatae minima voluptate facilis
-        necessitatibus similique deleniti optio possimus magni, magnam voluptatem obcaecati aliquam porro accusamus
-        doloremque harum, recusandae sequi.</p>
-
-    <a href="https://www.oculus.com/experiences/quest/developer-post/7218260371575169/" target="_blank">не натискай</a>
-
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim accusantium est voluptate repellat reiciendis
-        corrupti labore aperiam optio omnis deleniti?</p>
-
-    <img src="https://images.unsplash.com/photo-1636051028886-0059ad2383c8?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fG1ldGElMjBxdWVzdHxlbnwwfHwwfHx8MA%3D%3D"
-        alt="meta quest photo" widht="1000">
+        <!--Абзац з текстом-заповнювачем. -->
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, placeat! Beatae minima voluptate facilis
+            necessitatibus similique deleniti optio possimus magni, magnam voluptatem obcaecati aliquam porro accusamus
+            doloremque harum, recusandae sequi.</p>
+        
+        <!--Посилання, яке відкриється у новій вкладці. -->
+        <a href="https://www.oculus.com/experiences/quest/developer-post/7218260371575169/" target="_blank">не натискай</a>
+        
+        <!--Абзац з текстом-заповнювачем. -->
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim accusantium est voluptate repellat reiciendis
+            corrupti labore aperiam optio omnis deleniti?</p>
+        
+        <!--Зображення з вказаним джерелом і описом -->
+        <img src="https://images.unsplash.com/photo-1636051028886-0059ad2383c8?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fG1ldGElMjBxdWVzdHxlbnwwfHwwfHx8MA%3D%3D"
+            alt="meta quest photo" widht="100">
     </main>
 
-
+    <!--відкриває нижній колонтитул -->
     <footer>
-    <a href="https://www.freepik.com/search">Icon by Freepik</a>
+        <!--Посилання на джерело іконки -->
+        <a href="https://www.freepik.com/search">Icon by Freepik</a>
     </footer>
 
 
