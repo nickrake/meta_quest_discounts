@@ -28,3 +28,10 @@ h1{
     /*Встановлює розмір шрифту для заголовка першого рівня на 30 пікселів.  */
     font-size: 30px;
 }
+
+.ads-block{
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border: 2px solid blue;
+    padding: 20px;
+}
